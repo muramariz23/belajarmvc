@@ -1,4 +1,4 @@
-<?php 
+ <?php 
 
 //class model siswa (CRUD siswa)
 class Model_siswa{
@@ -52,7 +52,7 @@ class Model_siswa{
 		function GET()
 		{
 			//perintah Get data
-			$this->query=mysqli_query($this->con,"select * from siswa");
+			$this->query=mysqli_query($this->con,"select siswa.nisn, siswa.nis, siswa.nama, kelas.nama_kelas, siswa.alamat, siswa.no_telp, spp.nominal from siswa join kelas on siswa.id_kelas = kelas.id_kelas join spp on siswa.id_spp = spp.id_spp");
 			while ($this->data=mysqli_fetch_array($this->query)) {
 				$this->result[]=$this->data;
 			}
@@ -65,7 +65,7 @@ class Model_siswa{
 		function GET_Where($nisn)
 		{
 			//perintah get where data
-			$this->query=mysqli_query($this->con,"select * from siswa where nisn='$nisn'");
+			$this->query=mysqli_query($this->con,"select siswa.nisn, siswa.nis, siswa.nama, kelas.id_kelas, kelas.nama_kelas, siswa.alamat, siswa.no_telp, spp.nominal from siswa join kelas on siswa.id_kelas = kelas.id_kelas join spp on siswa.id_spp = spp.id_spp where nisn='$nisn'");
 			while($this->data=mysqli_fetch_array($this->query))
 			{
 				$this->result[]=$this->data;
@@ -81,7 +81,7 @@ class Model_siswa{
 			//perintah PUT data
 			mysqli_query($this->con,"update siswa set
 				nis='".$nis."',
-				nama='"$nama"',
+				nama='".$nama."',
 				id_kelas='".$id_kelas."',
 				alamat='".$alamat."',
 				no_telp='".$no_telp."',
@@ -104,4 +104,4 @@ class Model_siswa{
 
 
 
- ?>
+ ?> 

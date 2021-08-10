@@ -1,8 +1,8 @@
 <?php 
 
-include '../controllers/controller.php';
+include '../controller/controller_siswa.php';
 // membuat objek dari class siswa
-$siswa = new controller();
+$siswa = new controller_siswa();
 $GetSiswa = $siswa->GetData_All();
 
 //mengecek di objek $siswa ada berapa banyak property
@@ -28,7 +28,7 @@ $GetSiswa = $siswa->GetData_All();
  				<th>KELAS</th>
  				<th>ALAMAT</th>
  				<th>NO TELEPON</th>
- 				<th>ID SPP</th>
+ 				<th>NOMINAL</th>
  				<th>TINDAKAN</th>
  			</tr>
  			<?php 
@@ -43,23 +43,24 @@ $GetSiswa = $siswa->GetData_All();
  							<td><?php echo $Get['nisn']; ?></td>
  							<td><?php echo $Get['nis']; ?></td>
  							<td><?php echo $Get['nama']; ?></td>
- 							<td><?php 
- 									if ($Get['kelas']==1) {
+ 							<td><?php echo $Get['nama_kelas']; ?></td>
+ 							<!-- <td><?php 
+ 									if ($Get['id_kelas']=="1") {
  										echo "RPL";
- 									}elseif ($Get['kelas']==2) {
+ 									}elseif ($Get['id_kelas']=="3") {
  										echo "TKJ";
  									}
- 							 ?></td>
+ 							 ?></td>  -->
  							 <td><?php echo $Get['alamat']; ?></td>
 
  							 <td><?php echo $Get['no_telp']; ?></td>
- 							 <td><?php echo $Get['id_spp']; ?></td>
+ 							 <td><?php echo $Get['nominal']; ?></td>
 
- 							 //untuk tindakan
+ 							 <!-- //untuk tindakan -->
  							 <td>
- 							 	<a href="../views/view_put_siswa.php?nisn=<?php echo $Get['nisn'] ?>">view</a>
- 							 	VIEW | 
- 							 	<a href="../config/routes.php?function=delete&nisn=<?php echo $Get['nisn'] ?>">DELETE</a>
+ 							 	<a href="../views/view_put_siswa.php?nisn=<?php echo $Get['nisn'] ?>">VIEW | </a>
+ 							
+ 							 	<a href="../config/routes.php?function=delete_siswa&nisn=<?php echo $Get['nisn'] ?>">DELETE</a>
  							 </td>
 
  						</tr>

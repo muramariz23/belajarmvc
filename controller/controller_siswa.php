@@ -1,7 +1,7 @@
 <?php 
 
 //class CRUD siswa
-class controller{
+class controller_siswa{
 
 	//property
 	var $db;
@@ -72,7 +72,7 @@ class controller{
 		function DELETEData($nisn)
 		{
 			//perintah delete data
-			$this->Msiswa->DELETE($nip);
+			$this->Msiswa->DELETE($nisn);
 		}
 
 		

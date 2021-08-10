@@ -1,9 +1,10 @@
 <?php 
 	//memanggil fungsi CSRF
 	include('../config/csrf.php');
+
  ?>
 
- <form action="../config/routes.php?function=create" method="POST">
+ <form action="../config/routes.php?function=create_siswa" method="POST">
  	<input type="text" name="csrf_token" value="<?php echo CreateCSRF(); ?>">
 
  	<table border="1">
@@ -20,7 +21,21 @@
  			<td><input type="text" name="nama"></td>
  		</tr>
 
- 		<tr></tr>
+ 		<tr>
+  			<td>KELAS</td>
+  			<td>
+  				<select name="id_kelas">
+  					<!-- logic combo get database-->
+
+  					
+  					<!--logic combo get database-->
+
+
+  					<option value= "1">RPL</option>
+  					<option value= "3">TKJ</option>
+  				</select>
+  			</td>
+  		</tr>
 
  		<tr>
  			<td>alamat</td>
@@ -37,6 +52,9 @@
  			<td><input type="text" name="id_spp"></td>
  		</tr>
 
+ 		<tr>
+  			<td colspan="2" align="right"><input type="submit" name="proses" value="create_siswa"></td>
+  		</tr>
  	</table>
  	
  </form>
