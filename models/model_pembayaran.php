@@ -16,7 +16,7 @@ class Model_pembayaran{
 	var $tgl_bayar;
 	var $bulan_dibayar;
 	var $tahun_dibayar;
-	var $nominal;
+	var $id_spp;
 	var $jumlah_bayar;
 
 
@@ -33,7 +33,7 @@ class Model_pembayaran{
 
 
 		//method memasukan data ke dalam table
-		function POST ($id_pembayaran,$id_petugas,$nisn,$tgl_bayar,$bulan_dibayar,$tahun_dibayar,$nominal, $jumlah_bayar)
+		function POST ($id_pembayaran,$id_petugas,$nisn,$tgl_bayar,$bulan_dibayar,$tahun_dibayar,$id_spp, $jumlah_bayar)
 		{
 			
 			mysqli_query($this->con,"insert into pembayaran values(
@@ -43,7 +43,7 @@ class Model_pembayaran{
 				'".$tgl_bayar."',
 				'".$bulan_dibayar."',
 				'".$tahun_dibayar."',
-				'".$nominal."',
+				'".$id_spp."',
 				'".$jumlah_bayar."'
 				)");
 		}
@@ -54,7 +54,7 @@ class Model_pembayaran{
 		function GET()
 		{
 			//perintah Get data
-			$this->query=mysqli_query($this->con,"SELECT pembayaran.id_pembayaran, petugas.nama_petugas, siswa.nisn, pembayaran.tgl_bayar, pembayaran.bulan_dibayar, pembayaran.tahun_dibayar, spp.nominal, pembayaran.jumlah_bayar FROM pembayaran JOIN petugas ON pembayaran.id_petugas = petugas.id_petugas JOIN siswa ON pembayaran.nisn = siswa.nisn JOIN spp ON pembayaran.id_spp = spp.id_spp");
+			$this->query=mysqli_query($this->con,"select pembayaran.*, petugas.nama_petugas, spp.nominal from pembayaran join petugas on pembayaran.id_petugas = petugas.id_petugas join spp on pembayaran.id_spp = spp.id_spp");
 			while ($this->data=mysqli_fetch_array($this->query)) {
 				$this->result[]=$this->data;
 			}
@@ -67,7 +67,7 @@ class Model_pembayaran{
 		function GET_Where($id_pembayaran)
 		{
 			//perintah get where data
-			$this->query=mysqli_query($this->con,"SELECT pembayaran.id_pembayaran, petugas.nama_petugas, siswa.nisn, pembayaran.tgl_bayar, pembayaran.bulan_dibayar, pembayaran.tahun_dibayar, spp.nominal, pembayaran.jumlah_bayar FROM pembayaran JOIN petugas ON pembayaran.id_petugas = petugas.id_petugas JOIN siswa ON pembayaran.nisn = siswa.nisn JOIN spp ON pembayaran.id_spp = spp.id_spp where id_pembayaran='$id_pembayaran'");
+			$this->query=mysqli_query($this->con,"select pembayaran.*, petugas.nama_petugas, spp.nominal from pembayaran join petugas on pembayaran.id_petugas = petugas.id_petugas join spp on pembayaran.id_spp = spp.id_spp where id_pembayaran='$id_pembayaran'");
 			while($this->data=mysqli_fetch_array($this->query))
 			{
 				$this->result[]=$this->data;
@@ -78,7 +78,7 @@ class Model_pembayaran{
 
 
 		//method memasukan data kedalam tabel
-		function PUT ($id_pembayaran,$id_petugas,$nisn,$tgl_bayar,$bulan_dibayar,$tahun_dibayar,$nominal, $jumlah_bayar)
+		function PUT ($id_pembayaran,$id_petugas,$nisn,$tgl_bayar,$bulan_dibayar,$tahun_dibayar,$id_spp, $jumlah_bayar)
 		{
 			//perintah PUT data
 			mysqli_query($this->con,"update pembayaran set
@@ -88,7 +88,7 @@ class Model_pembayaran{
 				tgl_bayar='".$tgl_bayar."',
 				bulan_dibayar='".$bulan_dibayar."',
 				tahun_dibayar='".$tahun_dibayar."',
-				nominal='".$nominal."',
+				id_spp='".$id_spp."',
 				jumlah_bayar='".$jumlah_bayar."'
 				where id_pembayaran='".$id_pembayaran."'
 				");

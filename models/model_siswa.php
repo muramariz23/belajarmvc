@@ -52,7 +52,19 @@ class Model_siswa{
 		function GET()
 		{
 			//perintah Get data
-			$this->query=mysqli_query($this->con,"select siswa.nisn, siswa.nis, siswa.nama, kelas.nama_kelas, siswa.alamat, siswa.no_telp, spp.nominal from siswa join kelas on siswa.id_kelas = kelas.id_kelas join spp on siswa.id_spp = spp.id_spp");
+			$this->query=mysqli_query($this->con,"select siswa.*, kelas.nama_kelas,  spp.nominal from siswa join kelas on siswa.id_kelas = kelas.id_kelas join spp on siswa.id_spp = spp.id_spp");
+			while ($this->data=mysqli_fetch_array($this->query)) {
+				$this->result[]=$this->data;
+			}
+			return $this->result;
+		}
+
+
+
+		function GETKelas()
+		{
+			//perintah Get data
+			$this->query=mysqli_query($this->con,"select * from kelas");
 			while ($this->data=mysqli_fetch_array($this->query)) {
 				$this->result[]=$this->data;
 			}
@@ -65,7 +77,7 @@ class Model_siswa{
 		function GET_Where($nisn)
 		{
 			//perintah get where data
-			$this->query=mysqli_query($this->con,"select siswa.nisn, siswa.nis, siswa.nama, kelas.id_kelas, kelas.nama_kelas, siswa.alamat, siswa.no_telp, spp.nominal from siswa join kelas on siswa.id_kelas = kelas.id_kelas join spp on siswa.id_spp = spp.id_spp where nisn='$nisn'");
+			$this->query=mysqli_query($this->con,"select siswa.*, kelas.nama_kelas,  spp.nominal from siswa join kelas on siswa.id_kelas = kelas.id_kelas join spp on siswa.id_spp = spp.id_spp where nisn='$nisn'");
 			while($this->data=mysqli_fetch_array($this->query))
 			{
 				$this->result[]=$this->data;

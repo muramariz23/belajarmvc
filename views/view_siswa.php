@@ -44,13 +44,7 @@ $GetSiswa = $siswa->GetData_All();
  							<td><?php echo $Get['nis']; ?></td>
  							<td><?php echo $Get['nama']; ?></td>
  							<td><?php echo $Get['nama_kelas']; ?></td>
- 							<!-- <td><?php 
- 									if ($Get['id_kelas']=="1") {
- 										echo "RPL";
- 									}elseif ($Get['id_kelas']=="3") {
- 										echo "TKJ";
- 									}
- 							 ?></td>  -->
+ 							
  							 <td><?php echo $Get['alamat']; ?></td>
 
  							 <td><?php echo $Get['no_telp']; ?></td>

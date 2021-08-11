@@ -49,6 +49,12 @@ class controller_siswa{
 		}
 
 
+		function GetData_Kelas()
+		{
+			return $this->Msiswa->GETKelas();
+		}
+
+		
 
 		//method untuk mengambil data seleksi dari tabel
 		function GetData_Where($nisn)

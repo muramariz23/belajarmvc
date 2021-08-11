@@ -1,9 +1,11 @@
 <?php 
 
+include 'csrf.php';
 include '../controller/controller_siswa.php';
 include '../controller/controller_kelas.php';
 include '../controller/controller_spp.php';
 include '../controller/controller_petugas.php';
+include '../controller/controller_pembayaran.php';
 //membuat objek dari class
 
 
@@ -37,7 +39,7 @@ if ($function == "create_siswa") {
 
 		$db_siswa = new controller_siswa();
 		//validasi token csrf
-		// if (validation() == true) {
+		if (validation() == true) {
 			$db_siswa->PUTData(
 			$_POST['nisn'],
 			$_POST['nis'],
@@ -45,10 +47,10 @@ if ($function == "create_siswa") {
 			$_POST['id_kelas'],
 			$_POST['alamat'],
 			$_POST['no_telp'],
-			$_POST['nominal'] 
+			$_POST['id_spp'] 
 		);
 
-		// }
+		}
 		header("location:../views/view_siswa.php");
 	}
 
@@ -204,7 +206,7 @@ if ($function == "create_siswa") {
 			$_POST['tgl_bayar'],
 			$_POST['bulan_dibayar'],
 			$_POST['tahun_dibayar'],
-			$_POST['nominal'],
+			$_POST['id_spp'],
 			$_POST['jumlah_bayar']
 		);
 	// }
@@ -225,7 +227,7 @@ if ($function == "create_siswa") {
 			$_POST['tgl_bayar'],
 			$_POST['bulan_dibayar'],
 			$_POST['tahun_dibayar'],
-			$_POST['nominal'],
+			$_POST['id_spp'],
 			$_POST['jumlah_bayar']
 		);
 

@@ -18,7 +18,7 @@ class controller_pembayaran{
 	var $tgl_bayar;
 	var $bulan_bayar;
 	var $tahun_bayar;
-	var $nominal;
+	var $id_spp;
 	var $jumlah_bayar;
 
 
@@ -34,10 +34,10 @@ class controller_pembayaran{
 
 
 		//method memasukan data ke dalam tabel
-		function POSTData ($id_pembayaran,$id_petugas,$nisn,$tgl_bayar,$bulan_bayar,$tahun_bayar,$nominal,$jumlah_bayar)
+		function POSTData ($id_pembayaran,$id_petugas,$nisn,$tgl_bayar,$bulan_bayar,$tahun_bayar,$id_spp,$jumlah_bayar)
 		{
 			//perintah POST data
-			$this->Mpembayaran->POST($id_pembayaran,$id_petugas,$nisn,$tgl_bayar,$bulan_bayar,$tahun_bayar,$nominal,$jumlah_bayar);
+			$this->Mpembayaran->POST($id_pembayaran,$id_petugas,$nisn,$tgl_bayar,$bulan_bayar,$tahun_bayar,$id_spp,$jumlah_bayar);
 		}
 
 
@@ -61,10 +61,10 @@ class controller_pembayaran{
 
 
 		//method memasukan data ke dalam tabel
-		function PUTData($id_pembayaran,$id_petugas,$nisn,$tgl_bayar,$bulan_bayar,$tahun_bayar,$nominal,$jumlah_bayar)
+		function PUTData($id_pembayaran,$id_petugas,$nisn,$tgl_bayar,$bulan_bayar,$tahun_bayar,$id_spp,$jumlah_bayar)
 		{
 			//perintah PUT data
-			$this->Msiswa->PUT($id_pembayaran,$id_petugas,$nisn,$tgl_bayar,$bulan_bayar,$tahun_bayar,$nominal,$jumlah_bayar);
+			$this->Mpembayaran->PUT($id_pembayaran,$id_petugas,$nisn,$tgl_bayar,$bulan_bayar,$tahun_bayar,$id_spp,$jumlah_bayar);
 		}
 
 
@@ -73,7 +73,7 @@ class controller_pembayaran{
 		function DELETEData($id_pembayaran)
 		{
 			//perintah delete data
-			$this->Msiswa->DELETE($id_pembayaran);
+			$this->Mpembayaran->DELETE($id_pembayaran);
 		}
 
 		
