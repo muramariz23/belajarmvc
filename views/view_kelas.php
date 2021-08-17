@@ -44,7 +44,7 @@ $GetKelas = $kelas->GetData_All();
  							 <td>
  							 	<a href="../views/view_put_kelas.php?id_kelas=<?php echo $Get['id_kelas'] ?>">VIEW | </a>
  							
- 							 	<a href="../config/routes.php?function=delete_kelas&id_kelas=<?php echo $Get['id_kelas'] ?>">DELETE</a>
+ 							 	<a href="../config/routes.php?function=delete_kelas&id_kelas=<?php echo $Get['id_kelas'] ?>" onclick="return confirm('ANDA YAKIN??')">DELETE</a>
  							 </td>
 
  						</tr>

@@ -55,7 +55,7 @@ $GetPembayaran = $pembayaran->GetData_All();
  							 <td>
  							 	<a href="../views/view_put_pembayaran.php?id_pembayaran=<?php echo $Get['id_pembayaran'] ?>">VIEW | </a>
  							
- 							 	<a href="../config/routes.php?function=delete_pembayaran&id_pembayaran=<?php echo $Get['id_pembayaran'] ?>">DELETE</a>
+ 							 	<a href="../config/routes.php?function=delete_pembayaran&id_pembayaran=<?php echo $Get['id_pembayaran'] ?>" onclick="return confirm('ANDA YAKIN??')">DELETE</a>
  							 </td>
 
  						</tr>

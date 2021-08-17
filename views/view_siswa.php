@@ -54,7 +54,7 @@ $GetSiswa = $siswa->GetData_All();
  							 <td>
  							 	<a href="../views/view_put_siswa.php?nisn=<?php echo $Get['nisn'] ?>">VIEW | </a>
  							
- 							 	<a href="../config/routes.php?function=delete_siswa&nisn=<?php echo $Get['nisn'] ?>">DELETE</a>
+ 							 	<a href="../config/routes.php?function=delete_siswa&nisn=<?php echo $Get['nisn'] ?>" onclick="return confirm('ANDA YAKIN??')">DELETE</a>
  							 </td>
 
  						</tr>

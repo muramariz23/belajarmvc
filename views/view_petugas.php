@@ -49,7 +49,7 @@ $GetPetugas = $petugas->GetData_All();
  							 <td>
  							 	<a href="../views/view_put_petugas.php?id_petugas=<?php echo $Get['id_petugas'] ?>">VIEW | </a>
  							
- 							 	<a href="../config/routes.php?function=delete_petugas&id_petugas=<?php echo $Get['id_petugas'] ?>">DELETE</a>
+ 							 	<a href="../config/routes.php?function=delete_petugas&id_petugas=<?php echo $Get['id_petugas'] ?>" onclick="return confirm('ANDA YAKIN??')">DELETE</a>
  							 </td>
 
  						</tr>

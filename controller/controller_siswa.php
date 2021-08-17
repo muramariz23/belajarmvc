@@ -13,14 +13,9 @@ class controller_siswa{
 	var $Msiswa;
 
 	var $nisn;
-	var $nis;
 	var $nama;
 	var $id_kelas;
-	var $alamat;
-	var $no_telp;
-	var $id_spp;
-
-
+	
 
 	//method main variabel
 		function __construct()

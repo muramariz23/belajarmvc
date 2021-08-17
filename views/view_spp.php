@@ -44,7 +44,7 @@ $GetSpp = $spp->GetData_All();
  							 <td>
  							 	<a href="../views/view_put_spp.php?id_spp=<?php echo $Get['id_spp'] ?>">VIEW | </a>
  							
- 							 	<a href="../config/routes.php?function=delete_spp&id_spp=<?php echo $Get['id_spp'] ?>">DELETE</a>
+ 							 	<a href="../config/routes.php?function=delete_spp&id_spp=<?php echo $Get['id_spp'] ?>" onclick="return confirm('ANDA YAKIN??')">DELETE</a>
  							 </td>
 
  						</tr>
