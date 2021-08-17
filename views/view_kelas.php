@@ -44,7 +44,7 @@ $GetKelas = $kelas->GetData_All();
  							 <td>
  							 	<a href="../views/view_put_kelas.php?id_kelas=<?php echo $Get['id_kelas'] ?>">VIEW | </a>
  							
- 							 	<a href="../config/routes.php?function=delete_kelas&id_kelas=<?php echo $Get['id_kelas'] ?>" onclick="return confirm('ANDA YAKIN??')">DELETE</a>
+ 							 	<button onclick="konfirmasi(<?php echo $Get['id_kelas']; ?>)">DELETE</button>
  							 </td>
 
  						</tr>
@@ -53,3 +53,13 @@ $GetKelas = $kelas->GetData_All();
  				}
  			 ?>
  		</table>
+
+ 		<script>
+ 			function konfirmasi(id_kelas) {
+ 				var a = id_kelas;
+ 				if (window.confirm('Apakah Data Ini Akan Dihapus??')) {
+ 					window.location.href='../config/routes.php?function=delete_kelas&id_kelas=' + a;
+ 				};
+ 			}
+
+ 		</script>

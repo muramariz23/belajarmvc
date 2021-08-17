@@ -49,7 +49,7 @@ $GetPetugas = $petugas->GetData_All();
  							 <td>
  							 	<a href="../views/view_put_petugas.php?id_petugas=<?php echo $Get['id_petugas'] ?>">VIEW | </a>
  							
- 							 	<a href="../config/routes.php?function=delete_petugas&id_petugas=<?php echo $Get['id_petugas'] ?>" onclick="return confirm('ANDA YAKIN??')">DELETE</a>
+ 							 	<button onclick="konfirmasi(<?php echo $Get['id_petugas']; ?>)">DELETE</button>
  							 </td>
 
  						</tr>
@@ -58,3 +58,13 @@ $GetPetugas = $petugas->GetData_All();
  				}
  			 ?>
  		</table>
+
+ 		<script>
+ 			function konfirmasi(id_petugas) {
+ 				var a = id_petugas;
+ 				if (window.confirm('Apakah Data Ini Akan Dihapus??')) {
+ 					window.location.href='../config/routes.php?function=delete_petugas&id_petugas=' + a;
+ 				};
+ 			}
+
+ 		</script>

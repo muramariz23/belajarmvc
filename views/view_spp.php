@@ -44,7 +44,7 @@ $GetSpp = $spp->GetData_All();
  							 <td>
  							 	<a href="../views/view_put_spp.php?id_spp=<?php echo $Get['id_spp'] ?>">VIEW | </a>
  							
- 							 	<a href="../config/routes.php?function=delete_spp&id_spp=<?php echo $Get['id_spp'] ?>" onclick="return confirm('ANDA YAKIN??')">DELETE</a>
+ 							 	<button onclick="return konfirmasi(<?php echo $Get['id_spp']; ?>)">DELETE</button>
  							 </td>
 
  						</tr>
@@ -53,3 +53,13 @@ $GetSpp = $spp->GetData_All();
  				}
  			 ?>
  		</table>
+
+ 		<script>
+ 			function konfirmasi(id_spp) {
+ 				var a = id_spp;
+ 				if (window.confirm('Apakah Data Ini Akan Dihapus??')) {
+ 					window.location.href='../config/routes.php?function=delete_spp&id_spp=' + a;
+ 				};
+ 			}
+
+ 		</script>
