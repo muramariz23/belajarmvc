@@ -17,7 +17,7 @@ $GetPembayaran = $pembayaran->GetData_Where($_GET['id_pembayaran']);
   ?>
 
   <form action="../config/routes.php?function=put_pembayaran" method="POST">
-    <input type="text" name="csrf_token" value="<?php echo CreateCSRF(); ?>">
+    <input type="hidden" name="csrf_token" value="<?php echo CreateCSRF(); ?>">
     <table border="1">
       <input type="hidden" name="id_pembayaran" value="<?php echo $Get['id_pembayaran']; ?>">
       <tr>

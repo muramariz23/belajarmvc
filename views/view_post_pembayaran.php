@@ -5,7 +5,7 @@
  ?>
 
  <form action="../config/routes.php?function=create_pembayaran" method="POST">
- 	<input type="text" name="csrf_token" value="<?php echo CreateCSRF(); ?>">
+ 	<input type="hidden" name="csrf_token" value="<?php echo CreateCSRF(); ?>">
 
  	<table border="1">
  		<tr>
@@ -16,7 +16,7 @@
         <td>ID PETUGAS</td>
         <td>
           <select name="id_petugas">
-            <option value= "2">RIZKI</option>
+            <option value= "1">RIZKI</option>
             <option value= "3">GATAU</option>
           </select>
         </td>

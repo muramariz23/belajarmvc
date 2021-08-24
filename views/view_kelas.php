@@ -42,7 +42,7 @@ $GetKelas = $kelas->GetData_All();
  							
  							 <!-- //untuk tindakan -->
  							 <td>
- 							 	<a href="../views/view_put_kelas.php?id_kelas=<?php echo $Get['id_kelas'] ?>">VIEW | </a>
+ 							 	<a href="../views/view_put_kelas.php?id_kelas=<?php echo base64_encode($Get['id_kelas']) ?>">VIEW | </a>
  							
  							 	<button onclick="konfirmasi(<?php echo $Get['id_kelas']; ?>)">DELETE</button>
  							 </td>
