@@ -7,7 +7,8 @@ include '../controller/controller_spp.php';
 
 //membuat objek dari class spp
 $spp = new controller_spp();
-$GetSpp = $spp->GetData_Where($_GET['id_spp']);
+$id_spp = base64_decode($_GET['id_spp']);
+$GetSpp = $spp->GetData_Where($id_spp);
 
  ?>
 

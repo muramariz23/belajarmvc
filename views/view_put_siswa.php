@@ -7,7 +7,8 @@ include '../controller/controller_siswa.php';
 
 //membuat objek dari class siswa
 $siswa = new controller_siswa();
-$GetSiswa = $siswa->GetData_Where($_GET['nisn']);
+$nisn = base64_decode($_GET['nisn']);
+$GetSiswa = $siswa->GetData_Where($nisn);
 
  ?>
 

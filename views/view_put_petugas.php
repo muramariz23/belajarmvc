@@ -7,8 +7,8 @@ include '../controller/controller_petugas.php';
 
 //membuat objek dari class petugas
 $petugas = new controller_petugas();
-$GetPetugas = $petugas->GetData_Where($_GET['id_petugas']);
-
+$id_petugas = base64_decode($_GET['id_petugas']);
+$GetPetugas = $petugas->GetData_Where($id_petugas);
  ?>
 
 
@@ -47,9 +47,9 @@ $GetPetugas = $petugas->GetData_Where($_GET['id_petugas']);
 
   					<option value="<?php echo $Get['level']; ?>">
   						<?php 
-  							if ($Get['level']=="administrator") {
+  							if ($Get['level']=="1") {
   								echo "ADMINISTRATOR";
-  							}elseif ($Get['level']=="petugas") {
+  							}elseif ($Get['level']=="2") {
   								echo "PETUGAS";
   							}
   						 ?>

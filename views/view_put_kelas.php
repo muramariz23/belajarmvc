@@ -7,8 +7,8 @@ include '../controller/controller_kelas.php';
 
 //membuat objek dari class kelas
 $kelas = new controller_kelas();
-
-$GetKelas = $kelas->GetData_Where(base64_decode($_GET['id_kelas']));
+$id_kelas = base64_decode($_GET['id_kelas']);
+$GetKelas = $kelas->GetData_Where($id_kelas);
 
  ?>
 

@@ -42,9 +42,9 @@ $GetSpp = $spp->GetData_All();
  							
  							 <!-- //untuk tindakan -->
  							 <td>
- 							 	<a href="../views/view_put_spp.php?id_spp=<?php echo $Get['id_spp'] ?>">VIEW | </a>
+ 							 	<a href="../views/view_put_spp.php?id_spp=<?php echo base64_encode($Get['id_spp']) ?>">VIEW | </a>
  							
- 							 	<button onclick="return konfirmasi(<?php echo $Get['id_spp']; ?>)">DELETE</button>
+ 							 	<button onclick="konfirmasi()">Delete</button>
  							 </td>
 
  						</tr>
@@ -58,7 +58,7 @@ $GetSpp = $spp->GetData_All();
  			function konfirmasi(id_spp) {
  				var a = id_spp;
  				if (window.confirm('Apakah Data Ini Akan Dihapus??')) {
- 					window.location.href='../config/routes.php?function=delete_spp&id_spp=' + a;
+ 					window.location.href='../config/routes.php?function=delete_spp&id_spp=<?php echo base64_encode($Get['id_spp']) ?>';
  				};
  			}
 

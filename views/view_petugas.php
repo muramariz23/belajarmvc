@@ -46,10 +46,10 @@ $GetPetugas = $petugas->GetData_All();
  							 <td><?php echo $Get['level']; ?></td>
 
  							 <!-- //untuk tindakan -->
- 							 <td>
- 							 	<a href="../views/view_put_petugas.php?id_petugas=<?php echo $Get['id_petugas'] ?>">VIEW | </a>
+ 							<td>
+ 							 	<a href="../views/view_put_petugas.php?id_petugas=<?php echo base64_encode($Get['id_petugas']) ?>">VIEW | </a>
  							
- 							 	<button onclick="konfirmasi(<?php echo $Get['id_petugas']; ?>)">DELETE</button>
+ 							 	<button onclick="konfirmasi()">Delete</button>
  							 </td>
 
  						</tr>
@@ -63,7 +63,7 @@ $GetPetugas = $petugas->GetData_All();
  			function konfirmasi(id_petugas) {
  				var a = id_petugas;
  				if (window.confirm('Apakah Data Ini Akan Dihapus??')) {
- 					window.location.href='../config/routes.php?function=delete_petugas&id_petugas=' + a;
+ 					window.location.href='../config/routes.php?function=delete_petugas&id_petugas=<?php echo base64_encode($Get['id_petugas']) ?>';
  				};
  			}
 

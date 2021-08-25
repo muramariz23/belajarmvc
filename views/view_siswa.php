@@ -52,9 +52,9 @@ $GetSiswa = $siswa->GetData_All();
 
  							 <!-- //untuk tindakan -->
  							 <td>
- 							 	<a href="../views/view_put_siswa.php?nisn=<?php echo $Get['nisn'] ?>">VIEW | </a>
+ 							 	<a href="../views/view_put_siswa.php?nisn=<?php echo base64_encode($Get['nisn']) ?>">VIEW | </a>
  							
- 							 	<button onclick="konfirmasi(<?php echo $Get['nisn']; ?>)">DELETE</button>
+ 							 	<button onclick="konfirmasi()">Delete</button>
  							 </td>
 
  						</tr>
@@ -65,10 +65,10 @@ $GetSiswa = $siswa->GetData_All();
  		</table>
 
  		<script>
- 			function konfirmasi(nisn) {
- 				var a = nisn;
+ 			function konfirmasi() {
+ 				
  				if (window.confirm('Apakah Data Ini Akan Dihapus??')) {
- 					window.location.href='../config/routes.php?function=delete_siswa&nisn=' + a;
+ 					window.location.href='../config/routes.php?function=delete_siswa&nisn=<?php echo base64_encode($Get['nisn']) ?>';
  				};
  			}
 

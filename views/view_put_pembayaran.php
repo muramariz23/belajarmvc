@@ -7,7 +7,8 @@ include '../controller/controller_pembayaran.php';
 
 //membuat objek dari class pembayaran
 $pembayaran = new controller_pembayaran();
-$GetPembayaran = $pembayaran->GetData_Where($_GET['id_pembayaran']);
+$id_pembayaran = base64_decode($_GET['id_pembayaran']);
+$GetPembayaran = $pembayaran->GetData_Where($id_pembayaran);
  ?>
 
  <?php 
