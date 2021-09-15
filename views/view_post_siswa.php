@@ -10,15 +10,15 @@
  	<table border="1">
  		<tr>
  			<td>NISN</td>
- 			<td><input type="text" name="nisn"></td>
+ 			<td><input type="number" name="nisn" required></td>
  		</tr>
  		<tr>
  			<td>NIS</td>
- 			<td><input type="text" name="nis"></td>
+ 			<td><input type="number" name="nis" required></td>
  		</tr>
  		<tr>
  			<td>nama</td>
- 			<td><input type="text" name="nama"></td>
+ 			<td><input type="text" name="nama" required></td>
  		</tr>
 
  		<tr>
@@ -39,17 +39,17 @@
 
  		<tr>
  			<td>alamat</td>
- 			<td><input type="text" name="alamat"></td>
+ 			<td><input type="text" name="alamat" required></td>
  		</tr>
 
  		<tr>
  			<td>NO TELEPON</td>
- 			<td><input type="text" name="no_telp"></td>
+ 			<td><input type="number" name="no_telp" required></td>
  		</tr>
 
  		<tr>
  			<td>SPP</td>
- 			<td><input type="text" name="id_spp"></td>
+ 			<td><input type="required" name="id_spp" required=""></td>
  		</tr>
 
  		<tr>

@@ -10,15 +10,15 @@
  	<table border="1">
  		<tr style="display: none">
  			<td>ID KELAS</td>
- 			<td><input type="text" name="id_kelas"></td>
+ 			<td><input type="hidden" name="id_kelas"></td>
  		</tr>
  		<tr>
  			<td>NAMA KELAS</td>
- 			<td><input type="text" name="nama_kelas"></td>
+ 			<td><input type="text" name="nama_kelas" required></td>
  		</tr>
  		<tr>
  			<td>KOMPETENSI KEAHLIAN</td>
- 			<td><input type="text" name="kompetensi_keahlian"></td>
+ 			<td><input type="text" name="kompetensi_keahlian" required></td>
  		</tr>
 
  		<tr>

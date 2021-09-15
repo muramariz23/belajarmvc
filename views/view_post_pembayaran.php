@@ -10,45 +10,45 @@
  	<table border="1">
  		<tr>
  			<td>ID PEMBAYARAN</td>
- 			<td><input type="text" name="id_pembayaran"></td>
+ 			<td><input type="hidden" name="id_pembayaran"></td>
  		</tr>
  		<tr>
         <td>ID PETUGAS</td>
         <td>
           <select name="id_petugas">
             <option value= "1">RIZKI</option>
-            <option value= "3">GATAU</option>
+            <option value= "3">RAMA</option>
           </select>
         </td>
       </tr>
  		<tr>
  			<td>NISN</td>
- 			<td><input type="text" name="nisn"></td>
+ 			<td><input type="number" name="nisn" required></td>
  		</tr>
 
  		<tr>
   		<td>TANGGAL BAYAR</td>
-      <td><input type="text" name="tgl_bayar"></td>
+      <td><input type="text" name="tgl_bayar" required></td>
   		</tr>
 
  		<tr>
  			<td>BULAN DIBAYAR</td>
- 			<td><input type="text" name="bulan_dibayar"></td>
+ 			<td><input type="text" name="bulan_dibayar" required></td>
  		</tr>
 
  		<tr>
  			<td>TAHUN DIBAYAR</td>
- 			<td><input type="text" name="tahun_dibayar"></td>
+ 			<td><input type="number" name="tahun_dibayar" required></td>
  		</tr>
 
  		<tr>
  			<td>SPP</td>
- 			<td><input type="text" name="id_spp"></td>
+ 			<td><input type="number" name="id_spp" required></td>
  		</tr>
 
     <tr>
       <td>JUMLAH DIBAYAR</td>
-      <td><input type="text" name="jumlah_bayar"></td>
+      <td><input type="number" name="jumlah_bayar"></td>
     </tr>
 
  		<tr>

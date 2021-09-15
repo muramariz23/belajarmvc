@@ -5,10 +5,10 @@ class database
 {
 
 	//property untuk dijadikan objek
-	var $host = "localhost";
-	var $uname = "root";
-	var $pass = "";
-	var $db = "dbspp";
+	var $host = "db4free.net";
+	var $uname = "muri_ramariz2";
+	var $pass = "*5hSGJX8PcuJ#TE";
+	var $db = "db_spp1";
 	var $connection;
 	
 	//method koneksi ke database

@@ -10,15 +10,15 @@
  	<table border="1">
  		<tr style="display: none">
  			<td>ID SPP</td>
- 			<td><input type="text" name="id_spp"></td>
+ 			<td><input type="hidden" name="id_spp"></td>
  		</tr>
  		<tr>
  			<td>TAHUN</td>
- 			<td><input type="text" name="tahun"></td>
+ 			<td><input type="number" name="tahun" required></td>
  		</tr>
  		<tr>
  			<td>NOMINAL</td>
- 			<td><input type="text" name="nominal"></td>
+ 			<td><input type="number" name="nominal" required></td>
  		</tr>
 
  		<tr>

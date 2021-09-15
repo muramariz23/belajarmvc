@@ -10,20 +10,20 @@
  	<table border="1">
  		<tr>
  			<td>ID PETUGAS</td>
- 			<td><input type="text" name="id_petugas"></td>
+ 			<td><input type="hidden" name="id_petugas"></td>
  		</tr>
  		<tr>
  			<td>USERNAME</td>
- 			<td><input type="text" name="username"></td>
+ 			<td><input type="text" name="username" required></td>
  		</tr>
  		<tr>
  			<td>PASSWORD</td>
- 			<td><input type="text" name="password"></td>
+ 			<td><input type="text" name="password" required></td>
  		</tr>
 
     <tr>
       <td>NAMA PETUGAS</td>
-      <td><input type="text" name="nama_petugas"></td>
+      <td><input type="text" name="nama_petugas" required></td>
     </tr>
 
  		<tr>
