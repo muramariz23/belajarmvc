@@ -8,9 +8,9 @@
  	<input type="hidden" name="csrf_token" value="<?php echo CreateCSRF(); ?>">
 
  	<table border="1">
- 		<tr style="display: none">
+ 		<tr>
  			<td>ID SPP</td>
- 			<td><input type="hidden" name="id_spp"></td>
+ 			<td><input type="number" name="id_spp" required></td>
  		</tr>
  		<tr>
  			<td>TAHUN</td>

@@ -10,7 +10,7 @@
  	<table border="1">
  		<tr>
  			<td>ID PEMBAYARAN</td>
- 			<td><input type="hidden" name="id_pembayaran"></td>
+ 			<td><input type="number" name="id_pembayaran" required></td>
  		</tr>
  		<tr>
         <td>ID PETUGAS</td>

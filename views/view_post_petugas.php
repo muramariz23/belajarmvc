@@ -10,7 +10,7 @@
  	<table border="1">
  		<tr>
  			<td>ID PETUGAS</td>
- 			<td><input type="hidden" name="id_petugas"></td>
+ 			<td><input type="number" name="id_petugas" required></td>
  		</tr>
  		<tr>
  			<td>USERNAME</td>
