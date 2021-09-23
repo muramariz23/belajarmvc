@@ -10,7 +10,7 @@
  	<table border="1">
  		<tr>
  			<td>ID PEMBAYARAN</td>
- 			<td><input type="number" name="id_pembayaran" required></td>
+ 			<td><input type="number" name="id_pembayaran" onKeyPress="return numberOnly(event);"  required></td>
  		</tr>
  		<tr>
         <td>ID PETUGAS</td>
@@ -23,32 +23,32 @@
       </tr>
  		<tr>
  			<td>NISN</td>
- 			<td><input type="number" name="nisn" required></td>
+ 			<td><input type="number" name="nisn" onKeyPress="return numberOnly(event);"  required></td>
  		</tr>
 
  		<tr>
   		<td>TANGGAL BAYAR</td>
-      <td><input type="text" name="tgl_bayar" required></td>
+      <td><input type="number" name="tgl_bayar" onKeyPress="return numberOnly(event);"  required></td>
   		</tr>
 
  		<tr>
  			<td>BULAN DIBAYAR</td>
- 			<td><input type="text" name="bulan_dibayar" required></td>
+ 			<td><input type="number" name="bulan_dibayar" onKeyPress="return numberOnly(event);"  required></td>
  		</tr>
 
  		<tr>
  			<td>TAHUN DIBAYAR</td>
- 			<td><input type="number" name="tahun_dibayar" required></td>
+ 			<td><input type="number" name="tahun_dibayar" onKeyPress="return numberOnly(event);" required></td>
  		</tr>
 
  		<tr>
  			<td>SPP</td>
- 			<td><input type="number" name="id_spp" required></td>
+ 			<td><input type="number" name="id_spp" onKeyPress="return numberOnly(event);" required></td>
  		</tr>
 
     <tr>
       <td>JUMLAH DIBAYAR</td>
-      <td><input type="number" name="jumlah_bayar"></td>
+      <td><input type="number" name="jumlah_bayar" onKeyPress="return numberOnly(event);" required></td>
     </tr>
 
  		<tr>
@@ -57,3 +57,24 @@
  	</table>
  	
  </form>
+
+  <script>
+  function numberOnly(evt){  //u
+    //var e = evt || window.event;
+  var charCode = (evt.which) ? evt.which : evt.keyCode
+    if (charCode != 46 && charCode > 31 
+  && (charCode < 48 || charCode > 57))
+        return false;
+        return true;
+  }
+       
+    function alphabetOnly
+    (evt)
+    {
+        var keyCode = (evt.which) ? evt.which : evt.keyCode
+        if ((keyCode < 65 || keyCode > 90) && (keyCode < 97 || keyCode > 123) && keyCode != 32)
+         
+        return false;
+            return true;
+    }
+ </script>
