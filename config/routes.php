@@ -31,7 +31,7 @@ if ($function == "create_siswa") {
 		);
 	// }
 
-	header("location:../views/view_siswa.php");
+	header("location:../Views/main.php?menu=".base64_encode(2));
 	}
 
 	//decision variabel PUT_siswa
@@ -51,7 +51,7 @@ if ($function == "create_siswa") {
 		);
 
 		}
-		header("location:../views/view_siswa.php");
+		header("location:../Views/main.php?menu=".base64_encode(2));
 	}
 
 	//decision variabel delete_siswa
@@ -59,7 +59,7 @@ if ($function == "create_siswa") {
 		$db_siswa = new controller_siswa();
 		$nisn = base64_decode($_GET['nisn']);
 		$db_siswa->DELETEData($nisn);
-		header("location:../views/view_siswa.php");
+		header("location:../Views/main.php?menu=".base64_encode(2));
 	}else{echo "error";}
 
 
@@ -76,7 +76,7 @@ if ($function == "create_siswa") {
 		);
 	}
 
-	header("location:../views/view_kelas.php");
+	    header("location:../Views/main.php?menu=".base64_encode(1));
 	}
 
 	//decision variabel PUT_kelas
@@ -92,7 +92,7 @@ if ($function == "create_siswa") {
 		);
 
 		}
-		header("location:../views/view_kelas.php");
+		    header("location:../Views/main.php?menu=".base64_encode(1));
 	}
 
 	//decision variabel delete_kelas
@@ -100,7 +100,7 @@ if ($function == "create_siswa") {
 		$db_kelas = new controller_kelas();
 		$id_kelas = base64_decode($_GET['id_kelas']);
 		$db_kelas->DELETEData($id_kelas);
-		header("location:../views/view_kelas.php");
+		header("location:../Views/main.php?menu=".base64_encode(1));
 	}else{echo "error";}
 
 	
@@ -117,7 +117,7 @@ if ($function == "create_siswa") {
 		);
 	// }
 
-	header("location:../views/view_spp.php");
+	header("location:../Views/main.php?menu=".base64_encode(4));
 	}
 
 	//decision variabel PUT_spp
@@ -133,7 +133,7 @@ if ($function == "create_siswa") {
 		);
 
 		// }
-		header("location:../views/view_spp.php");
+		header("location:../Views/main.php?menu=".base64_encode(4));
 	}
 
 	//decision variabel delete_spp
@@ -141,7 +141,7 @@ if ($function == "create_siswa") {
 		$db_spp = new controller_spp();
 		$id_spp = base64_decode($_GET['id_spp']);
 		$db_spp->DELETEData($id_spp);
-		header("location:../views/view_spp.php");
+		header("location:../Views/main.php?menu=".base64_encode(4));
 	}else{echo "error";}
 
 
@@ -161,7 +161,7 @@ if ($function == "create_siswa") {
 		);
 	// }
 
-	header("location:../views/view_petugas.php");
+	header("location:../Views/main.php?menu=".base64_encode(3));
 	}
 
 	//decision variabel PUT_petugas
@@ -179,7 +179,7 @@ if ($function == "create_siswa") {
 		);
 
 		// }
-		header("location:../views/view_petugas.php");
+		header("location:../Views/main.php?menu=".base64_encode(3));
 	}
 
 	//decision variabel delete_petugas
@@ -187,7 +187,7 @@ if ($function == "create_siswa") {
 		$db_petugas = new controller_petugas();
 		$id_petugas = base64_decode($_GET['id_petugas']);
 		$db_petugas->DELETEData($id_petugas);
-		header("location:../views/view_petugas.php");
+		header("location:../Views/main.php?menu=".base64_encode(3));
 	}else{echo "error";}
 
 
@@ -211,7 +211,7 @@ if ($function == "create_siswa") {
 		);
 	// }
 
-	header("location:../views/view_pembayaran.php");
+	header("location:../Views/main.php?menu=".base64_encode(5));
 	}
 
 	//decision variabel PUT_siswa
@@ -232,7 +232,7 @@ if ($function == "create_siswa") {
 		);
 
 		// }
-		header("location:../views/view_pembayaran.php");
+		header("location:../Views/main.php?menu=".base64_encode(5));
 	}
 
 	//decision variabel delete_siswa
@@ -240,6 +240,6 @@ if ($function == "create_siswa") {
 		$db_pembayaran = new controller_pembayaran();
 		$id_pembayaran = base64_decode($_GET['id_pembayaran']);
 		$db_pembayaran->DELETEData($id_pembayaran);
-		header("location:../views/view_pembayaran.php");
+		header("location:../Views/main.php?menu=".base64_encode(5));
 	}else{echo "error";}
  ?>
