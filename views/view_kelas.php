@@ -21,16 +21,18 @@ $GetKelas = $kelas->GetData_All();
  		<h3>Tabel Kelas</h3> <h3><a href="main.php?menu=<?php echo base64_encode(6) ?>"><i class="fa fa-plus-square" style="font-size:25px; color: blue;"> ADD DATA</i></a></h3>
 
 
-
- 		<table border="1">
- 			<tr>
- 				<th>NO</th>
- 				<th>ID KELAS</th>
- 				<th>NAMA KELAS</th>
- 				<th>KOMPETENSI KEAHLIAN</th>
- 				<th>TINDAKAN</th>
- 			</tr>
- 			<?php 
+ 		<table class="table table-success">
+  			<thead>
+    			<tr>
+      				<th scope="col">NO</th>
+ 					<th scope="col">ID KELAS</th>
+ 					<th scope="col">NAMA KELAS</th>
+ 					<th scope="col">KOMPETENSI KEAHLIAN</th>
+ 					<th scope="col">TINDAKAN</th>
+    			</tr>
+  			</thead>
+  			<tbody>
+    			<?php 
 
  				//decision validasi variabel
  				if (isset($GetKelas)) {
@@ -38,7 +40,7 @@ $GetKelas = $kelas->GetData_All();
  					foreach ($GetKelas as $Get) {
  						?>
  						<tr>
- 							<td><?php echo $no++; ?></td>
+ 							<th scope="row"><?php echo $no++; ?></th>
  							<td><?php echo $Get['id_kelas']; ?></td>
  							<td><?php echo $Get['nama_kelas']; ?></td>
  							<td><?php echo $Get['kompetensi_keahlian']; ?></td>
@@ -56,7 +58,8 @@ $GetKelas = $kelas->GetData_All();
  					}
  				}
  			 ?>
- 		</table>
+  			</tbody>
+		</table>
 
  		<script>
  			function konfirmasi(id_kelas) {

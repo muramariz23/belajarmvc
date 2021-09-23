@@ -7,18 +7,18 @@
  <form action="../config/routes.php?function=create_spp" method="POST">
  	<input type="hidden" name="csrf_token" value="<?php echo CreateCSRF(); ?>">
 
- 	<table border="1">
+ 	<table class="table table-info">
  		<tr>
- 			<td>ID SPP</td>
- 			<td><input type="number" name="id_spp" onKeyPress="return numberOnly(event);" required></td>
+ 			<th scope="row">ID SPP</th>
+ 			<td><input class="form-control" type="number" name="id_spp" onKeyPress="return numberOnly(event);" required></td>
  		</tr>
  		<tr>
- 			<td>TAHUN</td>
- 			<td><input type="number" name="tahun" onKeyPress="return numberOnly(event);" required></td>
+ 			<th scope="row">TAHUN</th>
+ 			<td><input  class="form-control" type="number" name="tahun" onKeyPress="return numberOnly(event);" required></td>
  		</tr>
  		<tr>
- 			<td>NOMINAL</td>
- 			<td><input type="number" name="nominal" onKeyPress="return numberOnly(event);" required></td>
+ 			<th scope="row">NOMINAL</th>
+ 			<td><input class="form-control" type="number" name="nominal" onKeyPress="return numberOnly(event);" required></td>
  		</tr>
 
  		<tr>

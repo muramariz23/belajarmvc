@@ -23,21 +23,21 @@ $GetSpp = $spp->GetData_Where($id_spp);
 
   <form action="../config/routes.php?function=put_spp" method="POST">
   	<input type="hidden" name="csrf_token" value="<?php echo CreateCSRF(); ?>">
-  	<table border="1">
+  	<table class="table table-warning">
   		<input type="hidden" name="id_spp" value="<?php echo $Get['id_spp']; ?>">
   		<tr>
-  			<td>TAHUN</td>
-  			<td><input type="text" name="tahun" value="<?php echo $Get['tahun'] ?>"></td>
+  			<th scope="row">TAHUN</th>
+  			<td><input class="form-control" type="text" name="tahun" value="<?php echo $Get['tahun'] ?>"></td>
   		</tr>
 
   		<tr>
-  			<td>NOMINAL</td>
-  			<td><input type="text" name="nominal" value="<?php echo $Get['nominal'] ?>"></td>
+  			<th scope="row">NOMINAL</th>
+  			<td><input class="form-control" type="text" name="nominal" value="<?php echo $Get['nominal'] ?>"></td>
   		</tr>
 
 
   		<tr>
-      <td><a href="http://localhost/belajarmvc/views/view_spp.php">back</a></td> 
+      <td><a href="main.php?menu=<?php echo base64_encode(4) ?>"><button type="button" class="btn btn-danger">KEMBALI</button></a></td> 
       
 
         <td colspan="2" align="right"><input type="submit" name="proses" value="create"></td>

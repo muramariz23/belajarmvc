@@ -7,24 +7,24 @@
  <form action="../config/routes.php?function=create_siswa" method="POST">
  	<input type="hidden" name="csrf_token" value="<?php echo CreateCSRF(); ?>">
 
- 	<table border="1">
+ 	<table class="table table-info">
  		<tr>
- 			<td>NISN</td>
- 			<td><input type="number" name="nisn" onKeyPress="return numberOnly(event);" required></td>
+ 			<th scope="row">NISN</th>
+ 			<td><input class="form-control" type="number" name="nisn" onKeyPress="return numberOnly(event);" required></td>
  		</tr>
  		<tr>
- 			<td>NIS</td>
- 			<td><input type="number" name="nis" onKeyPress="return numberOnly(event);" required></td>
+ 			<th scope="row">NIS</th>
+ 			<td><input class="form-control" type="number" name="nis" onKeyPress="return numberOnly(event);" required></td>
  		</tr>
  		<tr>
- 			<td>nama</td>
- 			<td><input type="text" name="nama" onKeyPress="return alphabetOnly(event);" required></td>
+ 			<th scope="row">nama</th>
+ 			<td><input class="form-control" type="text" name="nama" onKeyPress="return alphabetOnly(event);" required></td>
  		</tr>
 
  		<tr>
-  			<td>KELAS</td>
+  			<th scope="row">KELAS</th>
   			<td>
-  				<select name="id_kelas">
+  				<select class="dropdown-list" name="id_kelas">
   					<!-- logic combo get database-->
 
   					
@@ -38,18 +38,18 @@
   		</tr>
 
  		<tr>
- 			<td>alamat</td>
- 			<td><input type="text" name="alamat" onKeyPress="return alphabetOnly(event);" required></td>
+ 			<th scope="row">alamat</th>
+ 			<td><input class="form-control" type="text" name="alamat" onKeyPress="return alphabetOnly(event);" required></td>
  		</tr>
 
  		<tr>
- 			<td>NO TELEPON</td>
- 			<td><input type="number" name="no_telp" onKeyPress="return numberOnly(event);" required></td>
+ 			<th scope="row">NO TELEPON</th>
+ 			<td><input class="form-control" type="number" name="no_telp" onKeyPress="return numberOnly(event);" required></td>
  		</tr>
 
  		<tr>
- 			<td>SPP</td>
- 			<td><input type="required" name="id_spp" onKeyPress="return numberOnly(event);" required></td>
+ 			<th scope="row">SPP</th>
+ 			<td><input class="form-control" type="required" name="id_spp" onKeyPress="return numberOnly(event);" required></td>
  		</tr>
 
  		<tr>

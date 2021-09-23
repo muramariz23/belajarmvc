@@ -21,16 +21,18 @@ $GetSpp = $spp->GetData_All();
  		<h3>Tabel spp</h3> <h3><a href="main.php?menu=<?php echo base64_encode(12) ?>"><i class="fa fa-plus-square" style="font-size:25px; color: blue;"> ADD DATA</i></a></h3>
 
 
-
- 		<table border="1">
- 			<tr>
- 				<th>NO</th>
- 				<th>ID SPP</th>
- 				<th>TAHUN</th>
- 				<th>NOMINAL</th>
- 				<th>TINDAKAN</th>
- 			</tr>
- 			<?php 
+ 		<table class="table table-danger">
+  <thead>
+    <tr>
+ 		<th scope="col">NO</th>
+ 		<th scope="col">ID SPP</th>
+ 		<th scope="col">TAHUN</th>
+ 		<th scope="col">NOMINAL</th>
+ 		<th scope="col">TINDAKAN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php 
 
  				//decision validasi variabel
  				if (isset($GetSpp)) {
@@ -38,7 +40,7 @@ $GetSpp = $spp->GetData_All();
  					foreach ($GetSpp as $Get) {
  						?>
  						<tr>
- 							<td><?php echo $no++; ?></td>
+ 							<td scope="row"><?php echo $no++; ?></td>
  							<td><?php echo $Get['id_spp']; ?></td>
  							<td><?php echo $Get['tahun']; ?></td>
  							<td><?php echo $Get['nominal']; ?></td>
@@ -56,6 +58,13 @@ $GetSpp = $spp->GetData_All();
  					}
  				}
  			 ?>
+  </tbody>
+</table>
+
+
+ 		<table border="1">
+ 			
+ 			
  		</table>
 
  		<script>

@@ -18,22 +18,23 @@ $GetPembayaran = $pembayaran->GetData_All();
  		<h2>CRUD dan CSRF</h2>
  		<h3>Tabel Pembayaran</h3> <h3><a href="main.php?menu=<?php echo base64_encode(14) ?>"><i class="fa fa-plus-square" style="font-size:25px; color: blue;"> ADD DATA</i></a></h3>
 
-
-
- 		<table border="1">
- 			<tr>
- 				<th>NO</th>
- 				<th>ID PEMBAYARAN</th>
- 				<th>NAMA PETUGAS</th>
- 				<th>NISN</th>
- 				<th>TANGGAL</th>
- 				<th>BULAN</th>
- 				<th>TAHUN</th>
- 				<th>NOMINAL</th>
- 				<th>JUMLAH BAYAR</th>
- 				<th>TINDAKAN</th>
- 			</tr>
- 			<?php 
+ 		<table class="table table-info">
+  <thead>
+    <tr>
+      		<th scope="col">NO</th>
+ 			<th scope="col">ID PEMBAYARAN</th>
+ 			<th scope="col">NAMA PETUGAS</th>
+ 			<th scope="col">NISN</th>
+ 			<th scope="col">TANGGAL</th>
+ 			<th scope="col">BULAN</th>
+ 			<th scope="col">TAHUN</th>
+ 			<th scope="col">NOMINAL</th>
+ 			<th scope="col">JUMLAH BAYAR</th>
+ 			<th scope="col">TINDAKAN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php 
 
  				//decision validasi variabel
  				if (isset($GetPembayaran)) {
@@ -41,7 +42,7 @@ $GetPembayaran = $pembayaran->GetData_All();
  					foreach ($GetPembayaran as $Get) {
  						?>
  						<tr>
- 							<td><?php echo $no++; ?></td>
+ 							<td scope="row"><?php echo $no++; ?></td>
  							<td><?php echo $Get['id_pembayaran']; ?></td>
  							<td><?php echo $Get['nama_petugas']; ?></td>
  							<td><?php echo $Get['nisn']; ?></td>
@@ -65,7 +66,9 @@ $GetPembayaran = $pembayaran->GetData_All();
  					}
  				}
  			 ?>
- 		</table>
+  </tbody>
+</table>
+
 
  		<script>
  			function konfirmasi(id_pembayaran) {

@@ -7,23 +7,28 @@
  <form action="../config/routes.php?function=create_kelas" method="POST">
  	<input type="hidden" name="csrf_token" value="<?php echo CreateCSRF(); ?>">
 
- 	<table border="1">
- 		<tr>
- 			<td>ID KELAS</td>
- 			<td><input type="number" name="id_kelas" onKeyPress="return numberOnly(event);" required></td>
- 		</tr>
- 		<tr>
- 			<td>NAMA KELAS</td>
- 			<td><input type="text" name="nama_kelas" required></td>
- 		</tr>
- 		<tr>
- 			<td>KOMPETENSI KEAHLIAN</td>
- 			<td><input type="text" name="kompetensi_keahlian" onKeyPress="return alphabetOnly(event);" required></td>
- 		</tr>
 
- 		<tr>
-  			<td colspan="2" align="right"><input type="submit" name="proses" value="create_kelas"></td>
-  		</tr>
+    <table class="table table-info">
+    <tr>
+            <th scope="row">ID KELAS</th>
+            <td><input class="form-control" type="number" name="id_kelas" onKeyPress="return numberOnly(event);" required></td>
+        </tr>
+        <tr>
+            <th scope="row">NAMA KELAS</th>
+            <td><input class="form-control" type="text" name="nama_kelas" required></td>
+        </tr>
+        <tr>
+            <th scope="row">KOMPETENSI KEAHLIAN</th>
+            <td><input class="form-control" type="text" name="kompetensi_keahlian" onKeyPress="return alphabetOnly(event);" required></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="right"><input type="submit" name="proses" value="create_kelas"></td>
+        </tr>
+</table>
+
+ 	<table border="1">
+ 		
  	</table>
  	
  </form>

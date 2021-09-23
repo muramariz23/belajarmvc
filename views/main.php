@@ -34,7 +34,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             TAMBAH DATA
           </a>
-          <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="main.php?menu=<?php echo base64_encode(6) ?>">DATA KELAS</a></li>
             <li><a class="dropdown-item" href="main.php?menu=<?php echo base64_encode(8) ?>">DATA SISWA</a></li>
             <li><a class="dropdown-item" href="main.php?menu=<?php echo base64_encode(10) ?>">DATA PETUGAS</a></li>

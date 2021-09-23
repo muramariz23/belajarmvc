@@ -7,29 +7,29 @@
  <form action="../config/routes.php?function=create_petugas" method="POST">
  	<input type="hidden" name="csrf_token" value="<?php echo CreateCSRF(); ?>">
 
- 	<table border="1">
+ 	<table class="table table-info" border="1">
  		<tr>
- 			<td>ID PETUGAS</td>
- 			<td><input type="number" name="id_petugas" onKeyPress="return numberOnly(event);"  required></td>
+ 			<th scope="row">ID PETUGAS</th>
+ 			<td><input class="form-control" type="number" name="id_petugas" onKeyPress="return numberOnly(event);"  required></td>
  		</tr>
  		<tr>
- 			<td>USERNAME</td>
- 			<td><input type="text" name="username" onKeyPress="return alphabetOnly(event);" required></td>
+ 			<th scope="row">USERNAME</th>
+ 			<td><input class="form-control" type="text" name="username" onKeyPress="return alphabetOnly(event);" required></td>
  		</tr>
  		<tr>
- 			<td>PASSWORD</td>
- 			<td><input type="text" name="password" onKeyPress="return alphabetOnly(event);" required></td>
+ 			<th scope="row">PASSWORD</th>
+ 			<td><input class="form-control" type="text" name="password" onKeyPress="return alphabetOnly(event);" required></td>
  		</tr>
 
     <tr>
-      <td>NAMA PETUGAS</td>
-      <td><input type="text" name="nama_petugas" onKeyPress="return alphabetOnly(event);" required></td>
+      <th scope="row">NAMA PETUGAS</th>
+      <td><input class="form-control" type="text" name="nama_petugas" onKeyPress="return alphabetOnly(event);" required></td>
     </tr>
 
  		<tr>
-  			<td>LEVEL</td>
+  			<th scope="row">LEVEL</th>
   			<td>
-  				<select name="level">
+  				<select class="dropdown-list" name="level">
   					<!--logic combo get database-->
 
 

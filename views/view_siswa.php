@@ -19,20 +19,23 @@ $GetSiswa = $siswa->GetData_All();
  		<h3>Tabel Siswa</h3> <h3><a href="main.php?menu=<?php echo base64_encode(8) ?>"><i class="fa fa-plus-square" style="font-size:25px; color: blue;"> ADD DATA</i></a></h3>
 
 
-
- 		<table border="1">
- 			<tr>
- 				<th>NO</th>
- 				<th>NISN</th>
- 				<th>NIS</th>
- 				<th>NAMA</th>
- 				<th>KELAS</th>
- 				<th>ALAMAT</th>
- 				<th>NO TELEPON</th>
- 				<th>NOMINAL</th>
- 				<th>TINDAKAN</th>
- 			</tr>
- 			<?php 
+ 		<table class="table table-warning">
+  <thead>
+    <tr>
+      <th >#</th>
+		<th scope="col">NO</th>
+ 		<th scope="col">NISN</th>
+ 		<th scope="col">NIS</th>
+ 		<th scope="col">NAMA</th>
+ 		<th scope="col">KELAS</th>
+ 		<th scope="col">ALAMAT</th>
+ 		<th scope="col">NO TELEPON</th>
+ 		<th scope="col">NOMINAL</th>
+ 		<th scope="col">TINDAKAN</th>
+    </tr>
+  </thead>
+  <tbody>
+   <?php 
 
  				//decision validasi variabel
  				if (isset($GetSiswa)) {
@@ -40,7 +43,7 @@ $GetSiswa = $siswa->GetData_All();
  					foreach ($GetSiswa as $Get) {
  						?>
  						<tr>
- 							<td><?php echo $no++; ?></td>
+ 							<td scope="row"><?php echo $no++; ?></td>
  							<td><?php echo $Get['nisn']; ?></td>
  							<td><?php echo $Get['nis']; ?></td>
  							<td><?php echo $Get['nama']; ?></td>
@@ -64,6 +67,13 @@ $GetSiswa = $siswa->GetData_All();
  					}
  				}
  			 ?>
+  </tbody>
+</table>
+
+
+
+ 		<table border="1">
+ 			
  		</table>
 
  		<script>

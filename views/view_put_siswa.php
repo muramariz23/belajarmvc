@@ -23,23 +23,23 @@ $GetSiswa = $siswa->GetData_Where($nisn);
 
   <form action="../config/routes.php?function=put_siswa" method="POST">
     <input type="hidden" name="csrf_token" value="<?php echo CreateCSRF(); ?>">
-    <table border="1">
+    <table class="table table-warning">
       <input type="hidden" name="nisn" value="<?php echo $Get['nisn']; ?>">
       <tr>
-        <td>NIS</td>
-        <td><input type="text" name="nis" value="<?php echo $Get['nis'] ?>"></td>
+        <th scope="row">NIS</th>
+        <td><input class="form-control" type="text" name="nis" value="<?php echo $Get['nis'] ?>"></td>
       </tr>
 
       <tr>
-        <td>NAMA</td>
-        <td><input type="text" name="nama" value="<?php echo $Get['nama'] ?>"></td>
+        <th scope="row">NAMA</th>
+        <td><input class="form-control" type="text" name="nama" value="<?php echo $Get['nama'] ?>"></td>
       </tr>
 
       <tr>
-        <td>KELAS</td>
+        <th scope="row">KELAS</td>
         <td>
           
-        <select name="id_kelas">
+        <select class="dropdown-list" name="id_kelas">
                 <?php 
                 $GetKelas = $siswa->GetData_Kelas();
                 foreach ($GetKelas as $GetK) : ?>
@@ -52,19 +52,19 @@ $GetSiswa = $siswa->GetData_Where($nisn);
       </tr>
 
       <tr>
-        <td>ALAMAT</td>
-        <td><input type="text" name="alamat" value="<?php echo $Get['alamat'] ?>"></td>
+        <th scope="row">ALAMAT</th>
+        <td><input class="form-control" type="text" name="alamat" value="<?php echo $Get['alamat'] ?>"></td>
       </tr>
 
       <tr>
-        <td>NO TELEPON</td>
-        <td><input type="text" name="no_telp" value="<?php echo $Get['no_telp'] ?>"></td>
+        <th scope="row">NO TELEPON</th>
+        <td><input class="form-control" type="text" name="no_telp" value="<?php echo $Get['no_telp'] ?>"></td>
       </tr>
 
       <tr>
-        <td>SPP</td>
+        <th scope="row">SPP</th>
         <td>
-        <select name="id_spp">
+        <select class="form-control" name="id_spp">
 
           <!-- Logic combo Get database -->
           <option value="<?php echo $Get['id_spp']; ?>">
@@ -91,8 +91,8 @@ $GetSiswa = $siswa->GetData_Where($nisn);
       </tr>
 
       <tr>
-      
 
+        <td><a href="main.php?menu=<?php echo base64_encode(2) ?>"><button type="button" class="btn btn-danger">KEMBALI</button></a></td> 
         <td colspan="2" align="right"><input type="submit" name="proses" value="create"></td>
       </tr>
     </table>

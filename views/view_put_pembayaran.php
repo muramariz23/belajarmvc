@@ -19,37 +19,37 @@ $GetPembayaran = $pembayaran->GetData_Where($id_pembayaran);
 
   <form action="../config/routes.php?function=put_pembayaran" method="POST">
     <input type="hidden" name="csrf_token" value="<?php echo CreateCSRF(); ?>">
-    <table border="1">
+    <table class="table table-warning">
       <input type="hidden" name="id_pembayaran" value="<?php echo $Get['id_pembayaran']; ?>">
       <tr>
-        <td>ID PETUGAS</td>
-        <td><input type="text" name="id_petugas" value="<?php echo $Get['id_petugas'] ?>"></td>
+        <th scope="row">ID PETUGAS</th>
+        <td><input class="form-control" type="text" name="id_petugas" value="<?php echo $Get['id_petugas'] ?>"></td>
       </tr>
 
       <tr>
-        <td>NISN</td>
-        <td><input type="text" name="nisn" value="<?php echo $Get['nisn'] ?>"></td>
+        <th scope="row">NISN</th>
+        <td><input class="form-control" type="text" name="nisn" value="<?php echo $Get['nisn'] ?>"></td>
       </tr>
 
        <tr>
-        <td>TANGGAL DIBAYAR</td>
-        <td><input type="text" name="tgl_bayar" value="<?php echo $Get['tgl_bayar'] ?>"></td>
+        <th scope="row">TANGGAL DIBAYAR</th>
+        <td><input class="form-control" type="text" name="tgl_bayar" value="<?php echo $Get['tgl_bayar'] ?>"></td>
       </tr>
 
       <tr>
-        <td>TANGGAL DIBAYAR</td>
-        <td><input type="text" name="bulan_dibayar" value="<?php echo $Get['bulan_dibayar'] ?>"></td>
+        <th scope="row">TANGGAL DIBAYAR</th>
+        <td><input class="form-control" type="text" name="bulan_dibayar" value="<?php echo $Get['bulan_dibayar'] ?>"></td>
       </tr>
 
       <tr>
-        <td>TAHUN DIBAYAR</td>
-        <td><input type="text" name="tahun_dibayar" value="<?php echo $Get['tahun_dibayar'] ?>"></td>
+        <th scope="row">TAHUN DIBAYAR</th>
+        <td><input class="form-control" type="text" name="tahun_bayar" value="<?php echo $Get['tahun_bayar'] ?>"></td>
       </tr>
 
       <tr>
-        <td>NOMINAL SPP</td>
+        <th scope="row">NOMINAL SPP</th>
         <td>
-        <select name="id_spp">
+        <select class="dropdown-list" name="id_spp">
 
           <!-- Logic combo Get database -->
           <option value="<?php echo $Get['id_spp']; ?>">
@@ -74,11 +74,12 @@ $GetPembayaran = $pembayaran->GetData_Where($id_pembayaran);
         </td>
       </tr>
 
-      <td>JUMLAH BAYAR</td>
-        <td><input type="text" name="jumlah_bayar" value="<?php echo $Get['jumlah_bayar'] ?>"></td>
+      <th scope="row">JUMLAH BAYAR</th>
+        <td><input class="form-control" type="text" name="jumlah_bayar" value="<?php echo $Get['jumlah_bayar'] ?>"></td>
       </tr>
 
       <tr>
+        <td><a href="main.php?menu=<?php echo base64_encode(5) ?>"><button type="button" class="btn btn-danger">KEMBALI</button></a></td> 
         <td colspan="2" align="right"><input type="submit" name="proses" value="create"></td>
       </tr>
     </table>
