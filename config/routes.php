@@ -67,6 +67,7 @@ if ($function == "create_siswa") {
 	//kelas
 	if ($function == "create_kelas") {
 	$db_kelas = new controller_kelas();
+	var_dump($_POST);die;
 	// validasi token csrf
 	if (validation() == true) {
 		$db_kelas->POSTData(

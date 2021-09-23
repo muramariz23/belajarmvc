@@ -32,6 +32,7 @@ class controller_kelas{
 		function POSTData ($id_kelas,$nama_kelas,$kompetensi_keahlian)
 		{
 			//perintah POST data
+			var_dump($id_kelas,$nama_kelas,$kompetensi_keahlian);die;
 			$this->Mkelas->POST($id_kelas,$nama_kelas,$kompetensi_keahlian);
 		}
 
